@@ -1,0 +1,83 @@
+﻿@model SmartERP.Reports.Pages.TodaysReportData
+@{
+    ViewData["Title"] = "Todays Report";
+}
+
+<section class="invoice">
+    <div class="row">
+        <div class="col-xs-12">
+            <h2 class="page-header">
+                Today's Sales Report
+                <small class="pull-right">Date: @DateTime.Now.ToShortDateString()</small>
+            </h2>
+        </div>
+    </div>
+    <!-- info row -->
+    <div class="row">
+        <div class="col-xs-12 table-responsive">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th style="text-align:left;width:20%;">Invoice #</th>
+                        <th style="text-align:left;width:40%;">Customer</th>
+                        <th style="text-align:left;width:20%;">Sale Date</th>
+                        <th style="text-align:right;width:20%;">Total Amount</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var order in Model.SaleOrders)
+                    {
+                    <tr>
+                        <td style="text-align:left">INV-@(order.Id.Value.ToString("0000"))</td>
+                        <td style="text-align:left">@order.CustomerName.</td>
+                        <td style="text-align:left">@(order.Date.Value.ToString("dd MM yyyy"))</td>
+                        <td style="text-align:right">@(order.NetTotal.Value.ToString("#,##0.00"))</td>
+                       
+                       
+                    </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+        <!-- /.col -->
+    </div>
+</section>
+<section class="invoice">
+    <div class="row">
+        <div class="col-xs-12">
+            <h2 class="page-header">
+                Today's Purchase Report
+                <small class="pull-right">Date: @DateTime.Now.ToShortDateString()</small>
+            </h2>
+        </div>
+    </div>
+    <!-- info row -->
+    <div class="row">
+        <div class="col-xs-12 table-responsive">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th style="text-align:left ;width:20%;">BILL #</th>
+                        <th style="text-align:left ;width:40%;">Supplier</th>
+                        <th style="text-align:left ;width:20%;">Purchase Date</th>
+                        <th style="text-align:right; width:20%;">Total Amount</th>                       
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var order in Model.PurchaseOrders)
+                    {
+                        <tr>
+                            <td style="text-align:left">BIL-@(order.Id.Value.ToString("0000"))</td>
+                            <td style="text-align:left">@order.SupplierCompanyName.</td>
+                            <td style="text-align:left">@(order.Date.Value.ToString("dd MM yyyy"))</td>
+                            <td style="text-align:right">@(order.NetTotal.Value.ToString("#,##0.00"))</td>
+
+                          
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+        <!-- /.col -->
+    </div>
+</section>

@@ -1,0 +1,28 @@
+From:
+Date: Wed, 10 Nov 2021 14:07:50 +0000
+Subject: Reset Your SmartERP Password
+Message-Id: <SZG5TZKE9FU4.7TW05TV4GJMD@DESKTOP-0MN7T0J>
+To: david@212digital.co.uk
+MIME-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+
+<html>
+<head>
+    <title>Reset your SmartERP password</title>
+</head>
+<body>
+    <p>admin,</p>
+
+    <p>We received a request to change your password on SmartERP.</p>
+
+    <p>Click the link below to set a new password:</p>
+
+    <p><a href="http://localhost:58952/Account/ResetPassword?t=CfDJ8PXmDS4RpghIismpWWYYPq7zoPPgo7lHivUiT0FlWxkowi36re1YjDIMVnl5WqR3VY3wo5rydyshDHbo3pZ7Jw%2Fe1oGr72Kz5yCNMWTlvxJt7r7y79sVdAjYpslQ%2BpbPeQ%3D%3D">http://localhost:58952/Account/ResetPassword?t=CfDJ8PXmDS4RpghIismpWWYYPq7zoPPgo7lHivUiT0FlWxkowi36re1YjDIMVnl5WqR3VY3wo5rydyshDHbo3pZ7Jw%2Fe1oGr72Kz5yCNMWTlvxJt7r7y79sVdAjYpslQ%2BpbPeQ%3D%3D</a></p>
+
+    <p>If you don't want to change your password, you can ignore this email.</p>
+
+    Thanks,
+    The "SmartERP" Team
+</body>
+</html>

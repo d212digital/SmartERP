@@ -1,0 +1,13 @@
+﻿
+@{
+    ViewData["Title"] = "Supplier Payable Report";
+}
+<div id="GridDiv"></div>
+
+<script type="text/javascript">
+    jQuery(function () {
+        new SmartERP.Reports.SupplierPayableReportGrid($('#GridDiv'), {}).init();
+
+        Q.initFullHeightGridPage($('#GridDiv'));
+    });
+</script>

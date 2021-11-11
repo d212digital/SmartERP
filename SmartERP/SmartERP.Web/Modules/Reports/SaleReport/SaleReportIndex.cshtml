@@ -1,0 +1,149 @@
+﻿@model SmartERP.Reports.Pages.SaleReportData
+@{
+    ViewData["Title"] = "Sale Report";
+}
+<style>
+    .company-txt {
+        font-size: 17pt;
+        font-weight: bold;
+    }
+
+   
+</style>
+<section class="invoice">
+    <form method="post" asp-controller="SaleReport" asp-action="Search">
+        <div class="row">
+            <div class="col-md-4">
+                <input type="date" id="txtStartDate" name="StartDate" class="form-control" placeholder="Start Date">
+            </div>
+            <div class="col-md-4">
+                <input type="date" id="txtEndDate" name="EndDate" class="form-control" placeholder="End Date">
+            </div>
+            <div class="col-md-4">
+                <button type="submit" class="btn btn-primary">Search</button>
+                <input type="button" class="btn btn-warning" name="btnPrint" id="btnPrint" value="Print" onclick="printDiv('printArea');" />
+            </div>
+        </div>
+    </form>
+</section>
+<section class="invoice" id="printArea">
+    <div class="row">
+        <div class="col-xs-12">
+            <h2 class="page-header">
+                Customer Sales Report
+                <small class="pull-right"></small>
+            </h2>
+        </div>
+    </div>
+    <div>
+        <table class="print-table" width="100%">
+
+            <tbody>
+                <tr>
+                    <td align="left" class="print-table-tr" style="width:33.333%">
+                        @if (Model.Company != null && !String.IsNullOrEmpty(Model.Company.SaleLogo))
+                        {
+                            <img src="/upload/@Model.Company.SaleLogo"  style="height:60px" title="@Model.Company.CompanyName" /><br>
+                        }
+
+                    </td>
+                    <td align="center" class="print-cominfo" style="width:33.333%">
+                        <span class="company-txt">
+                            @Model.Company.CompanyName
+                        </span><br>
+                        @Model.Company.Address<br>
+                        @Model.Company.CompanyEmail<br>
+                        @Model.Company.Phone
+                    </td>
+
+                    <td align="right" class="print-table-tr" style="width:33.333%">
+                        <date>
+                            Date:  @DateTime.Now.ToString("dd-MMM-yyyy")
+                        </date>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <div class="row">
+            <div class="col-xs-12 table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th style="text-align:left">Order #</th>
+                            <th style="text-align:right">Customer</th>
+                            <th style="text-align:right">Date</th>
+                            <th style="text-align:right">Payment</th>
+                            <th>Sale Detail</th>
+                            <th style="text-align:center">Method</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var order in Model.Orders)
+                        {
+                            <tr>
+                                <td style="text-align:left">INV-@(order.Id.Value.ToString("0000"))</td>
+                                <td style="text-align:right">@order.CustomerName.</td>
+                                <td style="text-align:right">@(order.Date.Value.ToString("dd MM yyyy"))</td>
+                                <td style="text-align:right">@(order.PaidAmount.Value.ToString("#,##0.00"))</td>
+                                <td>
+                                    <div class="row">
+                                        <div class="col-xs-12 table-responsive">
+                                            <table class="table table-striped">
+                                                <thead>
+                                                    <tr>
+                                                        <th style="text-align:left">Product</th>
+                                                        <th style="text-align:right">Unit Price</th>
+                                                        <th style="text-align:right">Quantity</th>
+                                                        <th style="text-align:right">Discount (%)</th>
+                                                        <th style="text-align:right">Line Total</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    @foreach (var orderDetail in Model.OrderDetails.Where(x => x.SaleId.Value == order.Id.Value))
+                                                    {
+                                                        <tr>
+                                                            <td style="text-align:left">@orderDetail.ProductName</td>
+                                                            <td style="text-align:right">@(orderDetail.UnitPrice.Value.ToString("#,##0.00"))</td>
+                                                            <td style="text-align:right">@(orderDetail.Quantity.Value.ToString())</td>
+                                                            <td style="text-align:right">@(orderDetail.Discount.Value.ToString("#,##0.00"))</td>
+                                                            <td style="text-align:right">@(orderDetail.Total.Value.ToString("#,##0.00"))</td>
+
+                                                        </tr>
+                                                    }
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <!-- /.col -->
+                                    </div>
+                                </td>
+                                <td style="text-align:center">
+                                    @{
+                                        if (order.PaymentAccount != null)
+                                        {
+                                            var account = Model.Accounts.Where(x => x.Id == order.PaymentAccount).FirstOrDefault();
+                                            if (account != null)
+                                            {
+                                                if (order.PaidAmount.Value > 0)
+                                                {
+                                                    @account.HeadName
+                                                }
+
+                                            }
+                                        }
+
+
+                                    }
+
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+            <!-- /.col -->
+        </div>
+    </div>
+    <!-- info row -->
+   
+</section>

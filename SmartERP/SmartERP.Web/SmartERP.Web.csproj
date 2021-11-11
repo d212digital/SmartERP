@@ -1,0 +1,388 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <PreserveCompilationContext>true</PreserveCompilationContext>
+    <AssemblyName>SmartERP.Web</AssemblyName>
+    <TypeScriptCompileBlocked>true</TypeScriptCompileBlocked>
+    <SerenitySrc>..\..\Serenity\src\</SerenitySrc>
+    <DotNetSergenExe>$(SerenitySrc)Serenity.Net.CodeGenerator\bin\sergen.exe</DotNetSergenExe>
+    <DotNetSergen>dotnet sergen</DotNetSergen>
+    <DotNetSergen Condition="Exists('$(DotNetSergenExe)')">$(DotNetSergenExe)</DotNetSergen>
+    <CommonSrc>..\..\common-features\src\</CommonSrc>
+    <ProSrc>..\..\pro-features\src\</ProSrc>
+    <TypeScriptToolsVersion>Latest</TypeScriptToolsVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\**\*.sql" Exclude="bin\**;obj\**;**\*.xproj;packages\**;@(EmbeddedResource)" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\AccountKind.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Accounts.AccountsColumns.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Accounts.AccountsForm.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Accounts.AccountsRow.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Accounts.AccountsService.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Accounts.BankTransactionsColumns.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Accounts.BankTransactionsForm.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Accounts.BankTransactionsRow.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Accounts.BankTransactionsService.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Accounts.CashAdjustmentColumns.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Accounts.CashAdjustmentForm.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Accounts.CashAdjustmentRow.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Accounts.CashAdjustmentService.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Accounts.ContraVoucherColumns.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Accounts.ContraVoucherForm.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Accounts.ContraVoucherRow.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Accounts.ContraVoucherService.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Accounts.CreditVoucherColumns.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Accounts.CreditVoucherForm.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Accounts.CreditVoucherRow.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Accounts.CreditVoucherService.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Accounts.CustomerReceiveColumns.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Accounts.CustomerReceiveForm.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Accounts.CustomerReceiveRow.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Accounts.CustomerReceiveService.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Accounts.DebitVoucherColumns.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Accounts.DebitVoucherForm.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Accounts.DebitVoucherRow.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Accounts.DebitVoucherService.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Accounts.JournalVoucherColumns.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Accounts.JournalVoucherForm.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Accounts.JournalVoucherRow.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Accounts.JournalVoucherService.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Accounts.OpeningBalanceColumns.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Accounts.OpeningBalanceForm.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Accounts.OpeningBalanceRow.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Accounts.OpeningBalanceService.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Accounts.SupplierPaymentColumns.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Accounts.SupplierPaymentForm.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Accounts.SupplierPaymentRow.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Accounts.SupplierPaymentService.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Accounts.TransactionsColumns.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Accounts.TransactionsForm.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Accounts.TransactionsRow.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Accounts.TransactionsService.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Administration.CitiesColumns.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Administration.CitiesForm.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Administration.CitiesRow.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Administration.CitiesService.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Administration.CompaniesColumns.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Administration.CompaniesForm.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Administration.CompaniesRow.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Administration.CompaniesService.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Administration.CountriesColumns.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Administration.CountriesForm.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Administration.CountriesRow.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Administration.CountriesService.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Administration.CurrenciesColumns.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Administration.CurrenciesForm.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Administration.CurrenciesRow.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Administration.CurrenciesService.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Administration.RegionsColumns.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Administration.RegionsForm.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Administration.RegionsRow.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Administration.RegionsService.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Administration.ShippersColumns.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Administration.ShippersForm.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Administration.ShippersRow.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Administration.ShippersService.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Administration.StatesColumns.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Administration.StatesForm.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Administration.StatesRow.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Administration.StatesService.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Administration.TerritoriesColumns.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Administration.TerritoriesForm.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Administration.TerritoriesRow.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Administration.TerritoriesService.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Administration.WarehousesColumns.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Administration.WarehousesForm.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Administration.WarehousesRow.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Administration.WarehousesService.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Banks.BanksColumns.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Banks.BanksForm.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Banks.BanksRow.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Banks.BanksService.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\BloodGroupKind.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\BusinessPartners.PermissionKeys.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\CashBank.PermissionKeys.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\CurrencyPositionKind.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Customers.CustomersColumns.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Customers.CustomersForm.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Customers.CustomersRow.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Customers.CustomersService.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Expenses.ExpensesColumns.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Expenses.ExpensesForm.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Expenses.ExpensesRow.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Expenses.ExpensesService.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Expenses.ExpenseTypesColumns.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Expenses.ExpenseTypesForm.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Expenses.ExpenseTypesRow.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Expenses.ExpenseTypesService.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Expenses.PermissionKeys.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Financial.PermissionKeys.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\HumanResource.AttendanceColumns.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\HumanResource.AttendanceForm.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\HumanResource.AttendanceRow.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\HumanResource.AttendanceService.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\HumanResource.DepartmentsColumns.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\HumanResource.DepartmentsForm.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\HumanResource.DepartmentsRow.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\HumanResource.DepartmentsService.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\HumanResource.DesignationsColumns.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\HumanResource.DesignationsForm.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\HumanResource.DesignationsRow.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\HumanResource.DesignationsService.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\HumanResource.EmployeesColumns.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\HumanResource.EmployeesForm.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\HumanResource.EmployeesRow.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\HumanResource.EmployeesService.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\HumanResource.PermissionKeys.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Inventory.DamagedProductsColumns.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Inventory.DamagedProductsForm.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Inventory.DamagedProductsRow.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Inventory.DamagedProductsService.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Inventory.GoodsIssueColumns.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Inventory.GoodsIssueDetailsColumns.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Inventory.GoodsIssueDetailsForm.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Inventory.GoodsIssueDetailsRow.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Inventory.GoodsIssueDetailsService.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Inventory.GoodsIssueForm.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Inventory.GoodsIssueRow.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Inventory.GoodsIssueService.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Inventory.GoodsReceiptColumns.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Inventory.GoodsReceiptDetailsColumns.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Inventory.GoodsReceiptDetailsForm.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Inventory.GoodsReceiptDetailsRow.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Inventory.GoodsReceiptDetailsService.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Inventory.GoodsReceiptForm.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Inventory.GoodsReceiptRow.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Inventory.GoodsReceiptService.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Inventory.PermissionKeys.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Inventory.UpdateStocksColumns.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Inventory.UpdateStocksForm.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Inventory.UpdateStocksRow.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Inventory.UpdateStocksService.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Masters.AgendaItemTypesColumns.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Masters.AgendaItemTypesForm.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Masters.AgendaItemTypesRow.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Masters.AgendaItemTypesService.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Masters.AttendanceStatusesColumns.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Masters.AttendanceStatusesForm.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Masters.AttendanceStatusesRow.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Masters.AttendanceStatusesService.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Masters.AttendeeTypesColumns.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Masters.AttendeeTypesForm.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Masters.AttendeeTypesRow.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Masters.AttendeeTypesService.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Masters.CustomerGroupsColumns.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Masters.CustomerGroupsForm.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Masters.CustomerGroupsRow.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Masters.CustomerGroupsService.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Masters.LocationsColumns.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Masters.LocationsForm.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Masters.LocationsRow.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Masters.LocationsService.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Masters.MeetingTypesColumns.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Masters.MeetingTypesForm.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Masters.MeetingTypesRow.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Masters.MeetingTypesService.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Masters.PermissionKeys.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Masters.ResolutionStatusesColumns.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Masters.ResolutionStatusesForm.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Masters.ResolutionStatusesRow.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Masters.ResolutionStatusesService.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Masters.SupplierGroupsColumns.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Masters.SupplierGroupsForm.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Masters.SupplierGroupsRow.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Masters.SupplierGroupsService.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Meeting.AgendaDecisionsColumns.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Meeting.AgendaDecisionsForm.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Meeting.AgendaDecisionsRow.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Meeting.AgendaDecisionsService.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Meeting.AgendaItemsColumns.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Meeting.AgendaItemsForm.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Meeting.AgendaItemsRow.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Meeting.AgendaItemsService.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Meeting.MeetingAttendeesColumns.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Meeting.MeetingAttendeesForm.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Meeting.MeetingAttendeesRow.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Meeting.MeetingAttendeesService.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Meeting.MeetingsColumns.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Meeting.MeetingsForm.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Meeting.MeetingsRow.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Meeting.MeetingsService.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Meeting.PermissionKeys.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Products.BrandsColumns.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Products.BrandsForm.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Products.BrandsRow.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Products.BrandsService.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Products.CategoriesColumns.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Products.CategoriesForm.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Products.CategoriesRow.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Products.CategoriesService.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Products.ProductsColumns.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Products.ProductsForm.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Products.ProductsRow.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Products.ProductsService.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Products.UnitsColumns.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Products.UnitsForm.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Products.UnitsRow.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Products.UnitsService.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Purchases.PermissionKeys.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Purchases.PurchaseDetailsColumns.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Purchases.PurchaseDetailsForm.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Purchases.PurchaseDetailsRow.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Purchases.PurchaseDetailsService.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Purchases.PurchasesColumns.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Purchases.PurchasesForm.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Purchases.PurchasesRow.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Purchases.PurchasesService.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Quotations.QuotationDetailsColumns.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Quotations.QuotationDetailsForm.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Quotations.QuotationDetailsRow.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Quotations.QuotationDetailsService.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Quotations.QuotationsColumns.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Quotations.QuotationsForm.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Quotations.QuotationsRow.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Quotations.QuotationsService.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\RateKind.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Reports.CustomerReceivableReportColumns.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Reports.DailyClosingColumns.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Reports.DailyClosingForm.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Reports.DailyClosingRow.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Reports.DailyClosingService.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Reports.PermissionKeys.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Reports.StockReportColumns.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Reports.SupplierPayableReportColumns.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Sales.PermissionKeys.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Sales.SaleDetailsColumns.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Sales.SaleDetailsForm.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Sales.SaleDetailsRow.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Sales.SaleDetailsService.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Sales.SalesColumns.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Sales.SalesForm.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Sales.SalesRow.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Sales.SalesService.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Services.PermissionKeys.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Services.ServiceInvoiceDetailsColumns.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Services.ServiceInvoiceDetailsForm.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Services.ServiceInvoiceDetailsRow.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Services.ServiceInvoiceDetailsService.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Services.ServiceInvoicesColumns.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Services.ServiceInvoicesForm.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Services.ServiceInvoicesRow.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Services.ServiceInvoicesService.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Services.ServicesColumns.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Services.ServicesForm.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Services.ServicesRow.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Services.ServicesService.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Suppliers.SuppliersColumns.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Suppliers.SuppliersForm.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Suppliers.SuppliersRow.ts" />
+    <TypeScriptCompile Remove="Imports\ServerTypings\Suppliers.SuppliersService.ts" />
+    <TypeScriptCompile Remove="Modules\Common\Helpers\J.initSkins.ts" />
+    <None Update="wwwroot\**\*">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </None>
+    <None Update="Modules\**\*.Template.html;Modules\**\*.ts.html">
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="EPPlus" Version="4.5.3.2" />
+    <PackageReference Include="FastMember" Version="1.5.0" />
+    <PackageReference Include="FluentMigrator.Runner" Version="3.2.9" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="3.1.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="3.1.0" />
+    <PackageReference Include="Microsoft.Data.Sqlite" Version="3.1.0" />
+    <PackageReference Include="Microsoft.TypeScript.MSBuild" Version="3.7.4">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Serenity.Assets" Version="5.0.44" />
+    <PackageReference Include="Serenity.Scripts" Version="5.0.51" />
+    <PackageReference Include="Serenity.Net.Web" Version="5.0.51" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Serenity.Extensions" Version="5.0.49.1" />
+    <!--<if:ThemeSamples>-->
+    <PackageReference Include="Serenity.Demo.ThemeSamples" Version="5.0.49.1" />
+    <!--</if:ThemeSamples>-->
+    <!--<if:Northwind>-->
+    <PackageReference Include="Serenity.Demo.Northwind" Version="5.0.49.1" />
+    <!--</if:Northwind>-->
+    <!--<if:BasicSamples>-->
+    <PackageReference Include="Serenity.Demo.BasicSamples" Version="5.0.49.1" />
+    <!--</if:BasicSamples>-->
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Modules\Accounts\Reports\" />
+    <Folder Include="Modules\Reports\NewFolder\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Modules\Common\Dashboard\DashboardIndex.cshtml" />
+    <None Include="Modules\Inventory\UpdateStocks\UpdateStocksIndex.cshtml" />
+    <None Include="wwwroot\Content\skins\glass001\bg-animations.less" />
+    <None Include="wwwroot\Content\skins\glass001\theme-variables.less" />
+    <None Include="wwwroot\Content\skins\glass001\theme.less" />
+    <None Include="wwwroot\Content\skins\glass001\themeDefs-overwrite.less" />
+    <None Include="wwwroot\Content\skins\glass001\themeDefs-tool-button-color.less" />
+    <None Include="wwwroot\Content\skins\glass001\themeDefs-wrapper-content-no-space.less" />
+    <None Include="wwwroot\Content\skins\glass001\themeDefs001.less" />
+    <None Include="wwwroot\Content\skins\glass001\themeDefs002.less" />
+    <None Include="wwwroot\Content\skins\glass001\themeDefs003.less" />
+    <None Include="wwwroot\Content\skins\glass001\themeDefs004.less" />
+    <None Include="wwwroot\Content\skins\glass001\themeDefs005.less" />
+    <None Include="wwwroot\Content\skins\glass001\themeDefs006.less" />
+    <None Include="wwwroot\Content\skins\glass001\themeDefs007.less" />
+    <None Include="wwwroot\Content\skins\glass001\themeDefs008.less" />
+    <None Include="wwwroot\Content\skins\glass001\themeDefs009.less" />
+    <None Include="wwwroot\Content\skins\glass001\themeDefs010.less" />
+    <None Include="wwwroot\Content\skins\glass001\themeDefs011.less" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Update="App_Data\texts\user.texts.ar-EG.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="App_Data\texts\user.texts.ar.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Update="wwwroot\Content\site\site.rtl.css">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="App_Data\Reporting\wkhtmltopdf.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <Import Project="$(SolutionDir)Serenity\build\submodule.targets" Condition="Exists('$(SolutionDir)Serenity\build\submodule.targets')" />
+  <Target Name="CreateInputsOutputs" BeforeTargets="BeforeBuild">
+    <CreateItem Include="Modules\**\*.ts;Imports\**\*.ts;tsconfig.json">
+      <Output TaskParameter="Include" ItemName="CompileTSCInputs" />
+    </CreateItem>
+    <CreateItem Include="wwwroot\Content\site\**\*.less">
+      <Output TaskParameter="Include" ItemName="CompileSiteLessInputs" />
+    </CreateItem>
+  </Target>
+  <Target Name="NpmInstall" BeforeTargets="BeforeBuild" Condition="!Exists('node_modules\@types\jquery\index.d.ts')">
+    <Message Text="Installing NPM packages..." Importance="high"></Message>
+    <Exec Command="npm install" />
+  </Target>
+  <Target Name="TransformMvcClientTypes" BeforeTargets="BeforeBuild">
+    <Exec Command="dotnet tool restore" ContinueOnError="true" />
+    <Exec Command="$(DotNetSergen) restore" ContinueOnError="true" />
+    <Exec Command="$(DotNetSergen) mvct" ContinueOnError="true" />
+  </Target>
+  <Target Name="CompileSiteLess" AfterTargets="AfterBuild" Inputs="@(CompileSiteLessInputs)" Outputs="wwwroot\Content\site\site.css">
+    <Message Text="Compiling site.less..." Importance="high"></Message>
+    <Exec Command="node_modules/.bin/lessc ./wwwroot/Content/site/site.less ./wwwroot/Content/site/site.css" ContinueOnError="true" />
+  </Target>
+  <Target Name="TransformServerTypings" AfterTargets="AfterBuild">
+    <Exec Command="$(DotNetSergen) servertypings" ContinueOnError="true" />
+  </Target>
+  <Target Name="CompileTSC" AfterTargets="AfterBuild" Inputs="@(CompileTSCInputs)" Outputs="wwwroot\Scripts\site\SmartERP.Web.js">
+    <Message Text="Executing TypeScript compiler..." Importance="high"></Message>
+    <Exec Command="node &quot;$(TSJavaScriptFile.Replace('build\\..\tools\', 'tools\'))&quot; -p ./tsconfig.json" ContinueOnError="true" />
+  </Target>
+</Project>

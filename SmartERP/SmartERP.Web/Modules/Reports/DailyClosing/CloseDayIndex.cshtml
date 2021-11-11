@@ -1,0 +1,72 @@
+﻿@model SmartERP.Reports.Pages.CloseDayData
+@{
+    ViewData["Title"] = "Cash Closing - " + DateTime.Now.ToString("dd MMMM yyyy");//Serenity.LocalText.Get("Db.Reports.DailyClosing.EntityPlural");
+}
+
+<div class="s-TemplatedDialog s-AccountsDialog s-Accounts-AccountsDialog flex-layout s-Panel">
+    <div class="panel-titlebar">
+        <div class="panel-titlebar-text">@ViewData["Title"]</div>
+    </div><!-- /.box-header -->
+    <!-- form start -->
+    <div style="padding:20px" class="s-DialogContent">
+        @if (Model.Enabled==false)
+        { 
+        <div class="alert alert-danger alert-dismissable">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+            Already Closed Today
+        </div>
+        }
+
+        <div class="row">
+            <div class="col-md-4">
+                <span>Last Day Closing</span>
+            </div>
+            <div class="col-md-8">
+                <input type="text" class="form-controlt" disabled="disabled" value="@Model.LastDayClosing">
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-md-4">
+                <span>Receive</span>
+            </div>
+            <div class="col-md-8">
+                <input type="text" class="form-controlt" disabled="disabled" value="@Model.Receive">
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-md-4">
+                <span>Payment</span>
+            </div>
+            <div class="col-md-8">
+                <input type="text" class="form-controlt" disabled="disabled" value="@Model.Payment">
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-md-4">
+                <span>Balance</span>
+            </div>
+            <div class="col-md-8">
+                <input type="text" class="form-controlt" disabled="disabled" value="@Model.Balance">
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            @if (Model.Enabled == true)
+            {
+                <form method="post" asp-controller="CloseDay" asp-action="CloseDay">
+                    <button type="submit" class="btn btn-primary" style="width:100px;">Close Day</button>
+                </form>
+            }
+            else
+            {
+                <button type="button" class="btn btn-primary" disabled="disabled" style="width:100px;">Close Day</button>
+            }
+
+        </div>
+
+    </div>
+
+</div>

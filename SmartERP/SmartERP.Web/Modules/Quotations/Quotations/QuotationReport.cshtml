@@ -1,0 +1,144 @@
+﻿
+@model SmartERP.Quotations.QuotationReportData
+
+@if ((bool?)ViewData["Printing"] == true)
+{
+    Layout = MVC.Views.Shared._LayoutNoNavigation;
+    ViewData["Title"] = " Quotation";
+}
+else
+{
+    ViewData["Title"] = " Quotation";
+}
+<section class="invoice">
+    <div class="row">
+        <div class="col-xs-12">
+            <h2 class="page-header">
+                Quotation
+                <small class="pull-right">Date: @DateTime.Now.ToShortDateString()</small>
+            </h2>
+        </div>
+    </div>
+    <!-- info row -->
+    <div class="row invoice-info">
+        <div class="col-sm-4 invoice-col">
+            @if (Model.Company!=null && !String.IsNullOrEmpty( Model.Company.Logo))
+            {
+                <img src="/upload/@Model.Company.SaleLogo"  style="height:60px" title="@Model.Company.CompanyName" /><br>
+            }
+            <br />
+            From
+            <address>
+                <strong>@Model.Company.CompanyName</strong><br>
+                @Model.Company.Address<br>
+                Phone: @Model.Company.Phone<br>
+                Email: @Model.Company.CompanyEmail<br>
+                VAT: @Model.Company.Vat
+            </address>
+        </div>
+        <!-- /.col -->
+        <div class="col-sm-4 invoice-col">
+            To
+            <address>
+                <strong>@Model.Customer.Name</strong><br>
+                @Model.Customer.Address<br>
+
+                Email: @Model.Customer.Email<br>
+                Phone: @Model.Customer.Phone<br>
+                VAT: @Model.Customer.Vat
+            </address>
+        </div>
+        <!-- /.col -->
+        <div class="col-sm-4 invoice-col">
+            <b>Quotation #Q-@(Model.Order.Id.Value.ToString("0000"))</b><br>
+            <br>
+            @*<b>Order ID:</b> @Model.Order.Id.Value<br>*@
+            <b>Order Date:</b> @Model.Order.Date.Value.ToShortDateString()<br>
+            <b>Due Date :</b> @Model.Order.Date.Value.AddDays(10).ToShortDateString()<br>
+        </div>
+        <!-- /.col -->
+    </div>
+    <!-- /.row -->
+    <!-- Table row -->
+    <div class="row">
+        <div class="col-xs-12 table-responsive">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th style="text-align:left">Product</th>
+                        <th style="text-align:right">Unit Price</th>
+                        <th style="text-align:right">Quantity</th>
+                        <th style="text-align:right">Discount (%)</th>
+                        <th style="text-align:right">Line Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var d in Model.Details)
+                    {
+                        <tr>
+                            <td style="text-align:left">@d.ProductName</td>
+                            <td style="text-align:right">@(d.UnitPrice.ToStringDefault("#,##0.00"))</td>
+                            <td style="text-align:right">@(d.Quantity.ToStringDefault())</td>
+                            <td style="text-align:right">@(d.Discount.ToStringDefault("#,##0.00"))</td>
+                            <td style="text-align:right">@(d.Total.ToStringDefault("#,##0.00"))</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+        <!-- /.col -->
+    </div>
+
+    <div class="row">
+        <div class="col-xs-6">
+
+        </div>
+        <!-- /.col -->
+        <div class="col-xs-6">
+            @*<p class="lead">Amount Due @(Model.Order.Date.Value.AddDays(10).ToShortDateString())</p>
+
+            @{
+                var subTotal = Model.Details.Sum(x => x.Total ?? 0);
+            }*@
+
+            <div class="table-responsive">
+                <table class="table">
+                    <tr>
+                        <th style="width:50%">Subtotal:</th>
+                        <td style="text-align:right">@Model.Company.CurrencyCurrencySymbol @Model.Order.GrandTotal.Value.ToString("#,##0.00")</td>
+                    </tr>
+                    <tr>
+                        <th style="width:50%">Fix Discount:</th>
+                        <td style="text-align:right">@Model.Company.CurrencyCurrencySymbol @Model.Order.Discount.Value.ToString("#,##0.00")</td>
+                    </tr>
+
+                    <tr>
+                        <th style="width:50%">Total Discount:</th>
+                        <td style="text-align:right">@Model.Company.CurrencyCurrencySymbol @Model.Order.TotalDiscount.Value.ToString("#,##0.00")</td>
+                    </tr>
+                    <tr>
+                        <th style="width:50%">VAT (@Model.Order.VatPercentage%)</th>
+                        <td style="text-align:right">@Model.Company.CurrencyCurrencySymbol @Model.Order.Vat.Value.ToString("#,##0.00")</td>
+                    </tr>
+                    @*<tr>
+            <th style="width:50%">Total Tax:</th>
+            <td style="text-align:right">@Model.Company.CurrencyCurrencySymbol @Model.Order.TotalTax.Value.ToString("#,##0.00")</td>
+        </tr>*@
+                    @if (Model.Order.ShippingCost.Value > 0)
+                    {
+                        <tr>
+                            <th style="width:50%">Freight:</th>
+                            <td style="text-align:right">@Model.Company.CurrencyCurrencySymbol @Model.Order.ShippingCost.Value.ToString("#,##0.00")</td>
+                        </tr>
+                    }
+                    <tr>
+                        <th style="width:50%">Grand Total:</th>
+                        <td style="text-align:right">@Model.Company.CurrencyCurrencySymbol @Model.Order.NetTotal.Value.ToString("#,##0.00")</td>
+                    </tr>
+
+
+                </table>
+            </div>
+        </div>
+    </div>
+</section>

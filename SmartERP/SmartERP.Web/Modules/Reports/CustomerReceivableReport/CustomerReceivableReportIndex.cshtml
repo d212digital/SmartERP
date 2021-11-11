@@ -1,0 +1,13 @@
+﻿@{
+    ViewData["Title"] = "Customer Receivable Report";
+}
+
+<div id="GridDiv"></div>
+
+<script type="text/javascript">
+    jQuery(function () {
+        new SmartERP.Reports.CustomerReceivableReportGrid($('#GridDiv'), {}).init();
+
+        Q.initFullHeightGridPage($('#GridDiv'));
+    });
+</script>

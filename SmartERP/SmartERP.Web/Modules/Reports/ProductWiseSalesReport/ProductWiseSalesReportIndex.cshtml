@@ -1,0 +1,107 @@
+﻿@model SmartERP.Reports.Pages.ProductWiseSalesReportData
+@{
+    ViewData["Title"] = "Product Wise Sale Report";
+}
+<style>
+    .company-txt {
+        font-size: 17pt;
+        font-weight: bold;
+    }
+   
+</style>
+<section class="invoice">
+    <form method="post" asp-controller="ProductWiseSalesReport" asp-action="Search">
+        <div class="row">
+            <div class="col-md-4">
+                <input type="date" id="txtStartDate" name="StartDate" class="form-control" placeholder="Start Date">
+            </div>
+            <div class="col-md-4">
+                <input type="date" id="txtEndDate" name="EndDate" class="form-control" placeholder="End Date">
+            </div>
+            <div class="col-md-4">
+                <button type="submit" class="btn btn-primary">Search</button>
+                <input type="button" class="btn btn-warning" name="btnPrint" id="btnPrint" value="Print" onclick="printDiv('printArea');" />
+            </div>
+        </div>
+    </form>
+</section>
+    <section class="invoice"  id="printArea">
+        <div class="row">
+            <div class="col-xs-12">
+                <h2 class="page-header">
+                    Product Wise Sale Report
+                    <small class="pull-right"></small>
+                </h2>
+            </div>
+        </div>
+        <div>
+            <table class="print-table" width="100%">
+
+                <tbody>
+                    <tr>
+                        <td align="left" class="print-table-tr" style="width:33.333%">
+                            @if (Model.Company != null && !String.IsNullOrEmpty(Model.Company.SaleLogo))
+                            {
+                                <img src="/upload/@Model.Company.SaleLogo" style="height:60px" title="@Model.Company.CompanyName" /><br>
+                            }
+                            
+                        </td>
+                        <td align="center" class="print-cominfo" style="width:33.333%">
+                            <span class="company-txt">
+                                @Model.Company.CompanyName
+                            </span><br>
+                            @Model.Company.Address<br>
+                            @Model.Company.CompanyEmail<br>
+                            @Model.Company.Phone
+                        </td>
+
+                        <td align="right" class="print-table-tr" style="width:33.333%">
+                            <date>
+                                Date:  @DateTime.Now.ToString("dd-MMM-yyyy")
+                            </date>
+                        </td>
+                    </tr>
+
+                </tbody>
+            </table>
+            <!-- info row -->
+            <div class="row">
+                <div class="col-xs-12 table-responsive">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th style="text-align:right">Sales Date</th>
+                                <th style="text-align:left">Product</th>
+                                <th style="text-align:center">Invoice No</th>
+                                <th style="text-align:left">Customer Name</th>
+                                <th style="text-align:right">Rate</th>
+                                <th style="text-align:right">Quantity</th>
+                                <th style="text-align:right">Discount (%)</th>
+                                <th style="text-align:right">Total</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var orderDetail in Model.OrderDetails)
+                            {
+                                var order = Model.Orders.Where(x => x.Id == orderDetail.SaleId).FirstOrDefault();
+                                <tr>
+                                    <td style="text-align:right">@(order.Date.Value.ToString("dd MM yyyy"))</td>
+                                    <td style="text-align:left">@orderDetail.ProductName</td>
+                                    <td style="text-align:center">INV-@(order.Id.Value.ToString("0000"))</td>
+                                    <td style="text-align:left">@order.CustomerName</td>
+                                    <td style="text-align:right">@(orderDetail.UnitPrice.Value.ToString("#,##0.00"))</td>
+                                    <td style="text-align:right">@(orderDetail.Quantity.Value.ToString())</td>
+                                    <td style="text-align:right">@(orderDetail.Discount.Value.ToString("#,##0.00"))</td>
+                                    <td style="text-align:right">@(orderDetail.Total.Value.ToString("#,##0.00"))</td>
+
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+                <!-- /.col -->
+            </div>
+        </div>
+       
+
+    </section>

@@ -1,0 +1,31 @@
+﻿@inject Serenity.ITextLocalizer Localizer
+@{
+    ViewData["Title"] = Localizer.Get("Db.Accounts.OpeningBalance.EntityPlural");
+}
+
+<div class="s-TemplatedDialog s-AccountsDialog s-Accounts-AccountsDialog flex-layout s-Panel">
+    <div class="panel-titlebar">
+        <div class="panel-titlebar-text">@ViewData["Title"]</div>
+    </div><!-- /.box-header -->
+    <!-- form start -->
+    <div style="padding:20px" class="s-DialogContent">
+        <div id="DialogDiv"></div>
+    </div>
+
+</div>
+
+<script type="text/javascript">
+    var myDialogAsPanel;
+    jQuery(function () {
+        // first create a new dialog
+        myDialogAsPanel = new SmartERP.Accounts.OpeningBalanceDialog();
+        // load a new entity if url doesn't contain an ID, or load order with ID specified in page URL
+        // here we use done event in second parameter, to be sure operation succeeded before showing the panel
+
+        myDialogAsPanel.load({}, function () {
+            // if we didn't reach here, probably there is no order with specified ID in url
+            myDialogAsPanel.element.removeClass('hidden').appendTo('#DialogDiv');
+            myDialogAsPanel.arrange();
+        });
+    });
+</script>

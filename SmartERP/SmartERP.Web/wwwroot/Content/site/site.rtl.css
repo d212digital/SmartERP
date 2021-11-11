@@ -1,0 +1,2447 @@
+﻿body {
+    direction: rtl;
+}
+
+/* font-awesome.css */
+
+.fa-ul {
+    padding-left: unset;
+    margin-left: unset;
+    padding-right: 0;
+    margin-right: 2.14285714em;
+}
+
+.fa-li {
+    left: unset;
+    right: -2.14285714em;
+}
+
+    .fa-li.fa-lg {
+        right: -1.85714286em;
+        left: unset;
+    }
+
+.fa-pull-left {
+    float: right;
+}
+
+.fa-pull-right {
+    float: left;
+}
+
+.fa.fa-pull-left {
+    margin-left: .3em;
+    margin-right: unset;
+}
+
+.fa.fa-pull-right {
+    margin-right: .3em;
+    margin-left: unset;
+}
+
+.pull-right {
+    float: left !important;
+}
+
+.pull-left {
+    float: right;
+}
+
+.fa.pull-left {
+    margin-left: .3em;
+    margin-right: unset;
+}
+
+.fa.pull-right {
+    margin-left: .3em;
+    margin-right: unset;
+}
+
+.fa-stack-1x, .fa-stack-2x {
+    right: 0;
+    left: unset;
+}
+
+/* bootstrap.css */
+
+@import "../bootstrap-rtl.css";
+
+/* select2.css */
+
+html[dir="rtl"] .select2-container .select2-choice .select2-arrow {
+    border-right-color: #ddd;
+    border-radius: 0;
+}
+
+.select2-container .select2-choice abbr.select2-search-choice-close {
+    left: 20px;
+    right: unset;
+    top: 5px;
+}
+
+.select2-search input[type=text] {
+    padding: 4px 5px 4px 20px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+/* pace.css */
+
+.pace .pace-progress {
+    left: 100%;
+    right: unset;
+}
+
+.pace .pace-progress-inner {
+    left: 0;
+    right: unset;
+}
+
+.pace .pace-activity {
+    left: 50%;
+    border-right-color: #fff;
+    right: unset;
+}
+
+@media (max-width:767px) {
+    .pace .pace-activity {
+        left: 15px;
+        right: unset;
+    }
+}
+
+/* toastr.css */
+
+.toast-close-button {
+    right: unset;
+    left: -0.3em;
+    float: left;
+}
+
+.toast-top-center {
+    left: 0;
+    right: unset;
+}
+
+.toast-bottom-center {
+    right: unset;
+    left: 0;
+}
+
+.toast-top-full-width {
+    left: 0;
+    right: unset;
+}
+
+.toast-bottom-full-width {
+    left: 0;
+    right: unset;
+}
+
+.toast-top-left {
+    right: 12px;
+    left: unset;
+}
+
+.toast-top-right {
+    left: 12px;
+    right: unset;
+}
+
+.toast-bottom-right {
+    left: 12px;
+    right: unset;
+}
+
+.toast-bottom-left {
+    right: 12px;
+    left: unset;
+}
+
+#toast-container > .toast-info {
+    background-position: right 15px center;
+}
+
+#toast-container > .toast-error {
+    background-position: right 15px center;
+}
+
+#toast-container > .toast-success {
+    background-position: right 15px center;
+}
+
+#toast-container > .toast-warning {
+    background-position: right 15px center;
+}
+
+#toast-container > div {
+    padding: 15px 50px 15px 15px;
+    -moz-border-radius: 3px 3px 3px 3px;
+    -webkit-border-radius: 3px 3px 3px 3px;
+    border-radius: 3px 3px 3px 3px;
+}
+
+.toast-progress {
+    right: 0;
+    left: unset;
+}
+
+@media all and (max-width: 240px) {
+    #toast-container > div {
+        padding: 8px 50px 8px 8px;
+    }
+
+    #toast-container .toast-close-button {
+        left: -0.2em;
+        right: unset;
+    }
+}
+
+@media all and (min-width: 241px) and (max-width: 480px) {
+    #toast-container > div {
+        padding: 8px 50px 8px 8px;
+    }
+
+    #toast-container .toast-close-button {
+        left: -0.2em;
+        right: unset;
+    }
+}
+
+@media all and (min-width: 481px) and (max-width: 768px) {
+    #toast-container > div {
+        padding: 15px 50px 15px 15px;
+    }
+}
+
+/* slick.grid.css */
+
+.slick-header-column.ui-state-default, .slick-group-header-column.ui-state-default {
+    float: right;
+}
+
+.slick-footerrow-column.ui-state-default {
+    float: right;
+}
+
+.slick-sort-indicator {
+    float: right;
+}
+
+.slick-resizable-handle {
+    left: 0px;
+    right: unset;
+}
+
+.slick-cell, .slick-headerrow-column, .slick-footerrow-column {
+    padding: 1px 1px 2px 2px;
+}
+
+/* serenity.css */
+
+.ui-widget-overlay {
+    left: unset;
+    right: 0;
+}
+
+.ui-resizable-n {
+    right: 0;
+    left: unset;
+}
+
+.ui-resizable-s {
+    right: 0;
+    left: unset;
+}
+
+.ui-resizable-e {
+    left: -5px;
+    right: unset;
+}
+
+.ui-resizable-w {
+    right: -5px;
+    left: unset;
+}
+
+.ui-resizable-se {
+    left: 1px;
+    right: unset;
+}
+
+.ui-resizable-sw {
+    right: -5px;
+    left: unset;
+}
+
+.ui-resizable-nw {
+    right: -5px;
+    left: unset;
+}
+
+.ui-resizable-ne {
+    left: -5px;
+    right: unset;
+}
+
+.ui-menu {
+    float: right;
+}
+
+    .ui-menu .ui-menu-item {
+        float: right;
+        clear: right;
+    }
+
+.ui-button {
+    margin-left: .1em;
+    margin-right: unset;
+}
+
+.ui-button-text-icon-primary .ui-button-text,
+.ui-button-text-icons .ui-button-text {
+    padding: .4em 2.1em .4em 1em;
+}
+
+.ui-button-text-icon-secondary .ui-button-text,
+.ui-button-text-icons .ui-button-text {
+    padding: .4em 1em .4em 2.1em;
+}
+
+input.ui-button,
+.ui-widget-content input.ui-button {
+    padding: 0 0 !important 1em;
+}
+
+.ui-button-icon-only .ui-icon {
+    right: 50%;
+    left: unset;
+    margin-right: -8px;
+    margin-left: unset;
+}
+
+.ui-button-text-icon-primary .ui-button-icon-primary,
+.ui-button-text-icons .ui-button-icon-primary,
+.ui-button-icons-only .ui-button-icon-primary {
+    right: .5em;
+    left: unset;
+}
+
+.ui-button-text-icon-secondary .ui-button-icon-secondary,
+.ui-button-text-icons .ui-button-icon-secondary,
+.ui-button-icons-only .ui-button-icon-secondary {
+    left: .5em;
+    right: unset;
+}
+
+.ui-button-text-icons .ui-button-icon-secondary,
+.ui-button-icons-only .ui-button-icon-secondary {
+    left: .5em;
+    right: unset;
+}
+
+.ui-buttonset {
+    margin-left: 7px;
+    margin-right: unset;
+}
+
+    .ui-buttonset .ui-button {
+        margin-left: -0.3em;
+        margin-right: 0;
+    }
+
+.ui-dialog .ui-dialog-titlebar {
+    padding: 2px 1em 2px 1px;
+}
+
+.fa-angle-times:before {
+    margin-right: -0.15em;
+    margin-left: unset;
+}
+
+.ui-dialog .ui-dialog-buttonpane {
+    padding: .3em .4em .5em 1em;
+}
+
+    .ui-dialog .ui-dialog-buttonpane .ui-dialog-buttonset {
+        float: left;
+    }
+
+.ui-dialog .ui-resizable-se {
+    left: 3px;
+    right: unset;
+}
+
+.ui-tabs .ui-tabs-nav li {
+    float: right;
+}
+
+    .ui-tabs .ui-tabs-nav li a {
+        float: right;
+    }
+
+.ui-datepicker .ui-datepicker-prev {
+    right: 2px;
+    left: unset;
+}
+
+.ui-datepicker .ui-datepicker-next {
+    left: 2px;
+    right: unset;
+}
+
+    .ui-datepicker .ui-datepicker-prev span,
+    .ui-datepicker .ui-datepicker-next span {
+        right: 50%;
+        left: unset;
+        margin-right: -8px;
+        margin-left: unset;
+    }
+
+.ui-datepicker .ui-datepicker-buttonpane button {
+    float: left;
+}
+
+    .ui-datepicker .ui-datepicker-buttonpane button.ui-datepicker-current {
+        float: right;
+    }
+
+.ui-datepicker-multi .ui-datepicker-group {
+    float: right;
+}
+
+.ui-datepicker-multi .ui-datepicker-buttonpane {
+    clear: right;
+}
+
+.ui-datepicker-rtl .ui-datepicker-prev {
+    right: auto;
+    left: 2px;
+}
+
+.ui-datepicker-rtl .ui-datepicker-next {
+    left: 2px;
+    right: 2px;
+}
+
+.ui-datepicker-rtl .ui-datepicker-prev:hover {
+    right: auto;
+    left: 1px;
+}
+
+.ui-datepicker-rtl .ui-datepicker-next:hover {
+    left: auto;
+    right: 1px;
+}
+
+.ui-datepicker-rtl .ui-datepicker-buttonpane {
+    clear: left;
+}
+
+    .ui-datepicker-rtl .ui-datepicker-buttonpane button {
+        float: right;
+    }
+
+        .ui-datepicker-rtl .ui-datepicker-buttonpane button.ui-datepicker-current {
+            float: left;
+        }
+
+.ui-datepicker-rtl .ui-datepicker-group {
+    float: left;
+}
+
+.ui-helper-zfix {
+    left: unset;
+    right: 0;
+}
+
+.ui-button-text-icon-primary .ui-button-text,
+.ui-button-text-icons .ui-button-text {
+    padding: .4em 2.1em .4em 1em;
+}
+
+.ui-button-text-icon-secondary .ui-button-text,
+.ui-button-text-icons .ui-button-text {
+    padding: .4em 1em .4em 2.1em;
+}
+
+.ui-button-icon-only .ui-icon {
+    right: 50%;
+    left: unset;
+    margin-right: -8px;
+    margin-left: unset;
+}
+
+.ui-button-text-icon-primary .ui-button-icon-primary,
+.ui-button-text-icons .ui-button-icon-primary,
+.ui-button-icons-only .ui-button-icon-primary {
+    right: .5em;
+    left: unset;
+}
+
+.ui-button-text-icon-secondary .ui-button-icon-secondary,
+.ui-button-text-icons .ui-button-icon-secondary,
+.ui-button-icons-only .ui-button-icon-secondary {
+    left: .5em;
+    right: unset;
+}
+
+.ui-button-text-icons .ui-button-icon-secondary,
+.ui-button-icons-only .ui-button-icon-secondary {
+    left: .5em;
+    right: unset;
+}
+
+.ui-dialog .ui-dialog-titlebar-buttonpane {
+    margin-left: 4px;
+    margin-right: unset;
+}
+
+    .ui-dialog .ui-dialog-titlebar-buttonpane > a {
+        float: left;
+        margin-right: 2px;
+        margin-left: unset;
+    }
+
+.ui-tabs .ui-tabs-nav {
+    padding-right: 8px;
+    padding-left: unset;
+}
+
+.ui-dialog-titlebar-buttonpane {
+    left: 34px !important;
+    right: unset !important;
+    margin-left: 4px;
+    margin-right: unset;
+}
+
+.ui-dialog .ui-resizable-se {
+    left: -1px;
+    right: unset;
+}
+
+.ui-tabs .ui-tabs-nav li {
+    margin-left: 2px;
+    margin-right: unset;
+}
+
+.ui-menu .ui-icon {
+    float: left;
+}
+
+.s-MaximizeButton {
+    float: left;
+}
+
+.ui-dropdownchecklist-text {
+    margin-left: 17px;
+    margin-right: unset;
+}
+
+.ui-dropdownchecklist-item {
+    padding-right: 1px;
+    padding-left: unset;
+}
+
+.ui-dropdownchecklist-indent {
+    padding-right: 20px;
+    padding-left: unset;
+}
+
+.select2-search input[type=text] {
+    padding: 4px 5px 4px 20px;
+}
+
+.select2-container .select2-choice {
+    padding: 0 6px 0 0;
+}
+
+    .select2-container .select2-choice abbr.select2-search-choice-close {
+        left: 20px;
+        right: unset;
+    }
+
+.slick-header-column,
+.slick-header-column.ui-state-default {
+    padding: 5px 4px 5px 2px;
+}
+
+.slick-sort-indicator {
+    left: 2px;
+    right: unset;
+}
+
+.s-SlickPager {
+    padding: 0 2px 0 0;
+}
+
+.slick-pg-in {
+    margin: 1px -2px 0px 3px;
+    margin-right: -2px;
+    margin-left: unset;
+    float: right;
+}
+
+.slick-pg-grp {
+    float: right;
+}
+
+.slick-pg-btn {
+    float: right;
+}
+
+.slick-pg-btn-span {
+    float: right;
+}
+
+.check-box {
+    margin-left: 4px;
+    margin-right: unset;
+}
+
+.s-CheckTreeEditor.s-DataGrid .s-TreeIndent {
+    float: right;
+}
+
+.s-CheckTreeEditor.s-DataGrid .s-TreeToggle {
+    float: right;
+    margin: 0 0 0 0px;
+}
+
+.effective-right {
+    float: right;
+    margin: 2px 0 0 3px;
+}
+
+.s-ApplyTreeOrdering {
+    float: left;
+    margin: 3px 2px 0 4px;
+}
+
+.s-IncludeDeleted {
+    float: left;
+    margin: 3px 2px 0 4px;
+}
+
+.delete-item {
+    float: left;
+}
+
+.s-ColumnPickerDialog .column-list ul {
+    padding-right: 0;
+    padding-left: unset;
+}
+
+.s-ColumnPickerDialog h5 i {
+    margin-right: unset;
+    margin-left: 2px;
+}
+
+.s-ColumnPickerDialog .drag-handle {
+    margin-left: 6px;
+    margin-right: unset;
+}
+
+.s-ColumnPickerDialog i.js-show,
+.s-ColumnPickerDialog i.js-hide {
+    left: 8px;
+    right: unset;
+}
+
+.s-ColumnPickerDialog .restore-defaults {
+    right: 6px;
+    left: unset;
+}
+
+.panel-titlebar-close {
+    margin-left: 5px;
+    margin-right: unset;
+    float: right;
+}
+
+.s-Dialog .ui-dialog-buttonpane,
+.s-Panel .ui-dialog-buttonpane {
+    padding: 2px 3px 2px 7px;
+}
+
+div.s-Toolbar .tool-button.no-text span.button-inner {
+    padding: 5px 13px 19px 3px;
+}
+
+.s-MessageDialog .message {
+    padding: 24px 86px 6px 6px;
+}
+
+.s-MessageDialog .ui-dialog-content:before {
+    padding: 0px 15px 0px 0px;
+}
+
+@media (max-width: 760px) {
+    .flex-layout .s-PropertyGrid .category-title {
+        margin: 12px 0 8px 10px;
+    }
+}
+
+.ui-dialog.mobile-layout .ui-dialog-titlebar {
+    padding-right: 2px;
+    padding-left: unset;
+}
+
+.upload-progress {
+    margin: 4px 0 0 4px;
+}
+
+.s-Toolbar .upload-progress {
+    float: left;
+}
+
+.file-item .download {
+    padding: 4px 38px 4px 0;
+}
+
+.file-item .filename {
+    padding-left: 16px;
+    padding-right: unset;
+}
+
+.s-MultipleImageUploadEditor li {
+    float: right;
+    margin-left: 6px;
+    margin-right: unset;
+}
+
+    .s-MultipleImageUploadEditor li .delete {
+        left: 0px;
+        right: unset;
+    }
+
+.file-download-link {
+    padding-right: 22px;
+    padding-left: unset;
+}
+
+.s-FilterPanel div.f,
+.s-FilterPanel div.l,
+.s-FilterPanel div.o,
+.s-FilterPanel div.v {
+    padding-left: 4px;
+    padding-right: unset;
+    float: right;
+}
+
+    .s-FilterPanel div.l .andor {
+        float: right;
+        margin-right: 1px;
+        margin-left: unset;
+    }
+
+    .s-FilterPanel div.l .leftparen,
+    .s-FilterPanel div.l .rightparen {
+        float: right;
+    }
+
+    .s-FilterPanel div.f select {
+        float: right;
+    }
+
+    .s-FilterPanel div.o select {
+        float: right;
+    }
+
+    .s-FilterPanel div.v input {
+        float: right;
+    }
+
+    .s-FilterPanel div.v select {
+        float: right;
+    }
+
+    .s-FilterPanel div.v .select2-container {
+        float: right;
+    }
+
+.s-FilterPanel a.delete {
+    float: right;
+    margin-left: 8px;
+    margin-right: unset;
+}
+
+.s-FilterPanel button {
+    float: right;
+    margin-left: 4px;
+    margin-right: unset;
+}
+
+.s-FilterPanel div.v .ui-datepicker-trigger {
+    float: right;
+    margin-right: 1px;
+    margin-left: unset;
+}
+
+.s-FilterPanel div.v span.sep {
+    float: right;
+}
+
+.s-FilterPanel div.v span.error {
+    padding-right: 17px;
+    padding-left: unset;
+    margin-right: 4px;
+    margin-left: unset;
+    float: right;
+}
+
+.s-FilterPanel .groups select {
+    float: right;
+    margin-left: 4px;
+    margin-right: unset;
+}
+
+.s-FilterPanel .groups a.apply-groups {
+    float: right;
+    clear: left;
+}
+
+.s-FilterPanel .groups a.clear-groups {
+    float: right;
+    clear: left;
+    margin-right: 4px;
+    margin-left: unset;
+}
+
+.s-FilterPanel div.v input.s-ClickDown {
+    padding: 1px 1px 1px 16px;
+    float: right;
+}
+
+.s-FilterPanel div.v a.s-LinkDropDown {
+    float: right;
+}
+
+    .s-FilterPanel div.v a.s-LinkDropDown .link-text {
+        padding: 1px 2px 1px 0px;
+    }
+
+.s-FilterPanel div.v .s-editor-item-link {
+    float: right;
+}
+
+.s-FilterDisplayBar {
+    padding-right: 4px;
+    padding-left: unset;
+}
+
+    .s-FilterDisplayBar .reset {
+        float: right;
+        margin-right: 4px;
+        margin-left: unset;
+        margin-left: 4px;
+        margin-right: unset;
+    }
+
+    .s-FilterDisplayBar .edit {
+        float: left;
+        padding-right: 22px;
+        padding-left: unset;
+        background-position: right 4px center;
+    }
+
+    .s-FilterDisplayBar .cap {
+        margin-left: 4px;
+        margin-right: unset;
+    }
+
+.s-Form .fieldset {
+    padding: 3px 8px 6px 6px;
+}
+
+.s-Form select {
+    padding: 2px 0px 2px 2px;
+}
+
+.s-Form .caption {
+    padding: 0 0 0 6px;
+}
+
+    .s-Form .caption sup {
+        padding-left: 2px;
+        padding-right: unset;
+    }
+
+.s-Form .caption,
+.s-Form .editor,
+s.Form .widget-wrapper {
+    float: right;
+}
+
+.s-Form .ui-datepicker-trigger {
+    float: right;
+    margin: 1px 1px 0 0;
+}
+
+.s-Form .separator {
+    float: right;
+}
+
+.s-Form label.error {
+    padding: 22px 20px 0 0;
+    float: right;
+}
+
+.s-Form label.checked {
+    float: right;
+}
+
+.s-Form .value-box {
+    float: right;
+}
+
+.s-Form .s-BooleanYesNoEditor label {
+    margin-left: 14px;
+    margin-right: 4px;
+}
+
+.s-Form .s-ClickDown {
+    padding: 1px 1px 1px 16px;
+}
+
+.s-Form .vx {
+    float: right;
+}
+
+.s-Form label.caption {
+    padding-left: 7px;
+    padding-right: unset;
+}
+
+.s-EditorItemLink {
+    margin: 0 1px 0 0;
+}
+
+    .s-EditorItemLink a {
+        padding: 2px 1px 1px 2px;
+    }
+
+.emaildomain {
+    float: right;
+}
+
+.s-RadioButtonEditor label {
+    margin-left: 8px;
+    margin-right: unset;
+}
+
+.s-RadioButtonEditor input {
+    margin-left: 2px;
+    margin-right: unset;
+}
+
+.inplace-button {
+    float: right;
+    margin-right: 2px;
+    margin-left: unset;
+}
+
+.s-ClickDown {
+    padding: 1px 1px 1px 16px;
+}
+
+a.s-LinkDropDown {
+    padding: 0 0 0 18px;
+}
+
+.s-LinkDropDown .link-text {
+    padding: 2px 2px 1px 0px;
+}
+
+a.s-LinkDropDown input {
+    padding: 2px 2px 1px 0px;
+}
+
+.s-PropertyGrid .category-links {
+    padding: 4px 4px 5px 6px;
+}
+
+    .s-PropertyGrid .category-links span.separator {
+        float: left;
+    }
+
+    .s-PropertyGrid .category-links a.category-link {
+        float: left;
+    }
+
+.s-PropertyGrid .category-title {
+    margin: 8px 0px 4px 8px;
+}
+
+    .s-PropertyGrid .category-title i.fa {
+        float: left;
+    }
+
+.s-PropertyGrid .category-title {
+    margin: 12px 6px 8px 10px;
+}
+
+.property-tabs {
+    padding-right: 8px;
+    padding-left: unset;
+}
+
+.quick-filter-item {
+    margin: 4px 0 0 4px;
+}
+
+    .quick-filter-item input {
+        margin-left: 6px;
+        margin-right: unset;
+    }
+
+    .quick-filter-item .s-DateTimeEditor.time {
+        margin-left: 6px;
+        margin-right: unset;
+    }
+
+    .quick-filter-item input.hasDatepicker {
+        margin-left: 1px;
+        margin-right: unset;
+    }
+
+    .quick-filter-item .ui-datepicker-trigger {
+        margin-left: 6px;
+        margin-right: unset;
+    }
+
+.s-QuickSearchBar {
+    margin: 2px 0 5px 5px;
+    float: right;
+}
+
+    .s-QuickSearchBar .quick-search-icon {
+        float: right;
+    }
+
+    .s-QuickSearchBar .s-QuickSearchInput {
+        padding: 0 4px 0 2px;
+        float: right;
+        border-radius: 3px 0 0 3px;
+        border-style: solid none solid solid;
+    }
+
+a.quick-search-field {
+    padding: 0 3px 0 13px;
+    float: left;
+    margin-left: 1px;
+    margin-right: unset;
+}
+
+.s-Toolbar .separator {
+    float: right;
+    margin: 2px 3px 0 6px;
+}
+
+.s-Toolbar .buttons-inner {
+    float: right;
+    padding: 0;
+}
+
+.s-Toolbar .button-inner {
+    float: right;
+    padding: 3px 20px 3px 3px;
+}
+
+.s-Toolbar .no-text .button-inner {
+    padding: 3px 13px 16px 3px;
+}
+
+.s-Toolbar .select2-container {
+    margin-left: 6px;
+    margin-right: unset;
+}
+
+.tool-button {
+    float: right;
+    margin-left: 3px;
+    margin-right: unset;
+}
+
+    .tool-button .button-outer {
+        float: right;
+    }
+
+.s-Toolbar .s-ToggleButton {
+    float: left;
+    margin: 4px 2px 0 4px;
+}
+
+/* site.css */
+
+.content-wrapper,
+.right-side,
+.main-footer {
+    margin-right: 280px;
+    margin-left: unset;
+}
+
+.layout-top-nav .content-wrapper,
+.layout-top-nav .right-side,
+.layout-top-nav .main-footer {
+    margin-right: 0;
+    margin-left: unset;
+}
+
+@media (max-width: 767px) {
+    .content-wrapper,
+    .right-side,
+    .main-footer {
+        margin-right: 0;
+        margin-left: unset;
+    }
+}
+
+@media (min-width: 768px) {
+    .sidebar-collapse .content-wrapper,
+    .sidebar-collapse .right-side,
+    .sidebar-collapse .main-footer {
+        margin-right: 0;
+        margin-left: unset;
+    }
+}
+
+.main-header .navbar {
+    margin-right: 280px;
+    margin-left: unset;
+}
+
+.layout-top-nav .main-header .navbar {
+    margin-right: 0;
+    margin-left: unset;
+}
+
+.main-header .navbar-custom-menu,
+.main-header .navbar-right {
+    float: left;
+}
+
+.main-header .sidebar-toggle {
+    float: right;
+}
+
+.main-header .navbar .nav > li.user > a > .fa,
+.main-header .navbar .nav > li.user > a > .glyphicon,
+.main-header .navbar .nav > li.user > a > .ion {
+    margin-left: 5px;
+    margin-right: unset;
+}
+
+.main-header .navbar .nav > li > a > .label {
+    left: 7px;
+    right: unset;
+}
+
+.main-header .logo {
+    float: right;
+}
+
+.content-header > h1 > small {
+    padding-right: 4px;
+    padding-left: unset;
+}
+
+.content-header > .breadcrumb {
+    float: left;
+    left: 10px;
+    right: unset;
+}
+
+    .content-header > .breadcrumb > li > a > .fa,
+    .content-header > .breadcrumb > li > a > .glyphicon,
+    .content-header > .breadcrumb > li > a > .ion {
+        margin-left: 5px;
+        margin-right: unset;
+    }
+
+@media (max-width: 991px) {
+    .content-header > .breadcrumb {
+        left: 0;
+        right: unset;
+    }
+}
+
+@media (max-width: 991px) {
+    .navbar-custom-menu .navbar-nav > li {
+        float: right;
+    }
+
+    .navbar-custom-menu .navbar-nav {
+        float: right;
+    }
+}
+
+@media (max-width: 767px) {
+    .main-header .navbar-custom-menu {
+        float: left;
+    }
+}
+
+@media (max-width: 991px) {
+    .navbar-collapse.pull-left + .navbar-custom-menu {
+        left: 40px;
+        right: unset;
+    }
+}
+
+.main-sidebar,
+.left-side {
+    right: 0;
+    left: unset;
+}
+
+.user-panel > .info {
+    padding: 5px 15px 5px 5px;
+    right: 55px;
+    left: unset;
+}
+
+    .user-panel > .info > a {
+        padding-left: 5px;
+        padding-right: unset;
+    }
+
+        .user-panel > .info > a > .fa,
+        .user-panel > .info > a > .ion,
+        .user-panel > .info > a > .glyphicon {
+            margin-left: 3px;
+            margin-right: unset;
+        }
+
+.sidebar-menu > li > a {
+    padding: 12px 15px 12px 5px;
+}
+
+.sidebar-menu > li .label,
+.sidebar-menu > li .badge {
+    margin-left: 5px;
+    margin-right: unset;
+}
+
+.sidebar-menu li.header {
+    padding: 10px 15px 10px 25px;
+}
+
+.sidebar-menu li > a > .fa-angle-left,
+.sidebar-menu li > a > .pull-right-container > .fa-angle-left {
+    margin-left: 10px;
+    margin-right: unset;
+}
+
+.sidebar-menu li > a > .fa-angle-left {
+    left: 10px;
+    right: unset;
+}
+
+.sidebar-menu .treeview-menu {
+    padding-right: 5px;
+    padding-left: unset;
+}
+
+    .sidebar-menu .treeview-menu .treeview-menu {
+        padding-right: 20px;
+        padding-left: unset;
+    }
+
+    .sidebar-menu .treeview-menu > li > a {
+        padding: 5px 15px 5px 5px;
+    }
+
+@media (min-width: 768px) {
+    .sidebar-mini.sidebar-collapse .content-wrapper,
+    .sidebar-mini.sidebar-collapse .right-side,
+    .sidebar-mini.sidebar-collapse .main-footer {
+        margin-right: 60px !important;
+        margin-left: unset !important;
+    }
+
+    .sidebar-mini.sidebar-collapse .sidebar-menu > li > a {
+        margin-left: 0;
+        margin-right: unset;
+    }
+
+    .sidebar-mini.sidebar-collapse .sidebar-menu > li:hover > a > span:not(.pull-right),
+    .sidebar-mini.sidebar-collapse .sidebar-menu > li:hover > .treeview-menu {
+        right: 50px;
+        left: unset;
+    }
+
+    .sidebar-mini.sidebar-collapse .sidebar-menu > li:hover > a > span {
+        margin-right: -3px;
+        margin-left: unset;
+        padding: 12px 20px 12px 5px;
+    }
+
+    .sidebar-mini.sidebar-collapse .sidebar-menu > li:hover > a > .pull-right-container {
+        float: left;
+        left: 200px !important;
+        left: unset !important;
+    }
+
+    .sidebar-mini.sidebar-collapse .sidebar-menu > li:hover > .treeview-menu {
+        margin-right: 0;
+        margin-left: unset;
+    }
+
+    .sidebar-mini.sidebar-collapse .main-header .navbar {
+        margin-right: 60px;
+        margin-left: unset;
+    }
+}
+
+
+
+.sidebar-menu li > a > .pull-right-container {
+    left: 10px;
+    right: unset;
+}
+
+.control-sidebar-bg,
+.control-sidebar {
+    left: -280px;
+    right: unset;
+}
+
+    .control-sidebar.control-sidebar-open,
+    .control-sidebar.control-sidebar-open + .control-sidebar-bg {
+        left: 0;
+        right: unset;
+    }
+
+.control-sidebar-open .control-sidebar-bg,
+.control-sidebar-open .control-sidebar {
+    left: 0;
+    right: 0;
+}
+
+@media (min-width: 768px) {
+    .control-sidebar-open .content-wrapper,
+    .control-sidebar-open .right-side,
+    .control-sidebar-open .main-footer {
+        margin-left: 250px;
+        margin-right: unset;
+    }
+}
+
+.control-sidebar-menu .menu-icon {
+    float: right;
+}
+
+.control-sidebar-menu .menu-info {
+    margin-right: 45px;
+    margin-left: unset;
+}
+
+.control-sidebar-light .control-sidebar-menu {
+    margin-right: -14px;
+    margin-left: unset;
+}
+
+.dropdown-menu > li > a > .glyphicon,
+.dropdown-menu > li > a > .fa,
+.dropdown-menu > li > a > .ion {
+    margin-left: 10px;
+    margin-right: unset;
+}
+
+.navbar-nav > .messages-menu > .dropdown-menu > li .menu > li > a > div > img {
+    margin: auto auto auto 10px;
+}
+
+.navbar-nav > .messages-menu > .dropdown-menu > li .menu > li > a > h4 {
+    margin: 0 45px 0 0;
+}
+
+    .navbar-nav > .messages-menu > .dropdown-menu > li .menu > li > a > h4 > small {
+        left: 0;
+        right: unset;
+    }
+
+.navbar-nav > .messages-menu > .dropdown-menu > li .menu > li > a > p {
+    margin: 0 45px 0 0;
+}
+
+.navbar-nav > .user-menu .user-image {
+    float: right;
+    margin-left: 10px;
+    margin-right: unset;
+}
+
+@media (max-width: 767px) {
+    .navbar-nav > .user-menu .user-image {
+        margin-left: 0;
+        margin-right: unset;
+    }
+}
+
+.navbar-custom-menu > .navbar-nav > li > .dropdown-menu {
+    right: auto;
+    left: 0;
+}
+
+@media (max-width: 991px) {
+    .navbar-custom-menu > .navbar-nav {
+        float: left;
+    }
+
+        .navbar-custom-menu > .navbar-nav > li > .dropdown-menu {
+            right: auto;
+            left: 5%;
+        }
+}
+
+.icheck > label {
+    padding-right: 0;
+    padding-left: unset;
+}
+
+.progress-group .progress-number {
+    float: left;
+}
+
+.small-box .icon {
+    left: 10px;
+    right: unset;
+}
+
+.box > .overlay,
+.overlay-wrapper > .overlay,
+.box > .loading-img,
+.overlay-wrapper > .loading-img {
+    right: 0;
+    left: unset;
+}
+
+.box .overlay > .fa,
+.overlay-wrapper .overlay > .fa {
+    right: 50%;
+    left: unset;
+    margin-right: -15px;
+    margin-left: unset;
+}
+
+.box-header > .fa,
+.box-header > .glyphicon,
+.box-header > .ion {
+    margin-left: 5px;
+    margin-right: unset;
+}
+
+.box-header > .box-tools {
+    left: 10px;
+    right: unset;
+}
+
+    .box-header > .box-tools.pull-right .dropdown-menu {
+        right: auto;
+        left: 0;
+    }
+
+@media (max-width: 991px) {
+    .chart-legend > li {
+        float: right;
+        margin-left: 10px;
+        margin-right: unset;
+    }
+}
+
+.box-comments .box-comment img {
+    float: right;
+}
+
+.box-comments .comment-text {
+    margin-right: 40px;
+    margin-left: unset;
+}
+
+.todo-list > li > input[type='checkbox'] {
+    margin: 0 5px 0 10px;
+}
+
+.todo-list > li .text {
+    margin-right: 5px;
+    margin-left: unset;
+}
+
+.todo-list > li .label {
+    margin-right: 10px;
+    margin-left: unset;
+}
+
+.todo-list > li .tools {
+    float: left;
+}
+
+    .todo-list > li .tools > .fa,
+    .todo-list > li .tools > .glyphicon,
+    .todo-list > li .tools > .ion {
+        margin-left: 5px;
+        margin-right: unset;
+    }
+
+.chat {
+    padding: 5px 10px 5px 20px;
+}
+
+    .chat .item > .message {
+        margin-right: 55px;
+        margin-left: unset;
+    }
+
+    .chat .item > .attachment {
+        margin-left: 15px;
+        margin-right: 65px;
+    }
+
+.info-box-icon {
+    float: right;
+}
+
+.info-box-content {
+    margin-right: 90px;
+    margin-left: unset;
+}
+
+.timeline > li {
+    margin-left: 10px;
+    margin-right: unset;
+}
+
+    .timeline > li > .timeline-item {
+        margin-left: 15px;
+        margin-right: 60px;
+    }
+
+        .timeline > li > .timeline-item > .time {
+            float: left;
+        }
+
+    .timeline > li > .fa,
+    .timeline > li > .glyphicon,
+    .timeline > li > .ion {
+        right: 18px;
+        left: unset;
+    }
+
+.btn-app {
+    margin: 0 10px 10px 0;
+}
+
+    .btn-app > .badge {
+        left: -10px;
+        right: unset;
+    }
+
+.callout {
+    padding: 15px 15px 15px 30px;
+}
+
+.alert .icon {
+    margin-left: 10px;
+    margin-right: unset;
+}
+
+.nav-pills > li > a > .fa,
+.nav-pills > li > a > .glyphicon,
+.nav-pills > li > a > .ion {
+    margin-left: 5px;
+    margin-right: unset;
+}
+
+.nav-tabs-custom > .nav-tabs > li {
+    margin-left: 5px;
+    margin-right: unset;
+}
+
+    .nav-tabs-custom > .nav-tabs > li:first-of-type {
+        margin-right: 0;
+        margin-left: unset;
+    }
+
+.nav-tabs-custom > .nav-tabs.pull-right > li {
+    float: left;
+}
+
+    .nav-tabs-custom > .nav-tabs.pull-right > li:first-of-type {
+        margin-left: 0;
+        margin-right: unset;
+    }
+
+.nav-tabs-custom > .nav-tabs > li.header > .fa,
+.nav-tabs-custom > .nav-tabs > li.header > .glyphicon,
+.nav-tabs-custom > .nav-tabs > li.header > .ion {
+    margin-left: 5px;
+    margin-right: unset;
+}
+
+.widget-user .widget-user-image {
+    right: 50%;
+    left: unset;
+    margin-right: -45px;
+    margin-left: unset;
+}
+
+.widget-user-2 .widget-user-username,
+.widget-user-2 .widget-user-desc {
+    margin-right: 75px;
+    margin-left: unset;
+}
+
+.widget-user-2 .widget-user-image > img {
+    float: right;
+}
+
+.skin-azure .sidebar-menu li > a > .fa-angle-left,
+.skin-azure-light .sidebar-menu li > a > .fa-angle-left {
+    left: 5px;
+    right: unset;
+}
+
+.skin-azure-light .sidebar-menu .treeview-menu > li > a {
+    padding-right: 19px;
+    padding-left: unset;
+}
+
+.skin-azure-light .sidebar-menu li > a > .fa-angle-left {
+    left: 1px;
+    right: unset;
+}
+
+.skin-azure-light .sidebar-menu > li > ul > li:hover > a,
+.skin-azure-light .sidebar-menu > li > ul > li.active > a {
+    padding-right: 15px;
+    padding-left: unset;
+}
+
+.skin-azure .navbar-nav > li > a,
+.skin-azure-light .navbar-nav > li > a {
+    border-right: 1px solid #016fce;
+    border-left: unset;
+}
+
+@media (min-width: 768px) {
+    .skin-azure .content,
+    .skin-azure-light .content {
+        padding: 25px 20px 15px 15px;
+    }
+
+    .skin-azure .content-header,
+    .skin-azure-light .content-header {
+        padding-right: 20px;
+        padding-left: unset;
+    }
+
+    .skin-azure .main-header .navbar,
+    .skin-azure-light .main-header .navbar {
+        margin-right: 0;
+        margin-left: unset;
+    }
+
+    .skin-azure .main-header .sidebar-toggle,
+    .skin-azure-light .main-header .sidebar-toggle {
+        /*padding-left: 1.25rem;
+        padding-right: unset;*/
+        right: 4px;
+        left: unset;
+    }
+
+    .skin-azure .main-header .logo,
+    .skin-azure-light .main-header .logo {
+        right: 6rem;
+        left: unset;
+        border-right: 1px solid #016fce;
+        border-left: unset;
+    }
+
+        .skin-azure .main-header .logo b,
+        .skin-azure-light .main-header .logo b {
+            float: right;
+            margin-right: 15px;
+            margin-left: unset;
+        }
+
+    .skin-azure.sidebar-mini.sidebar-collapse .main-header .navbar,
+    .skin-azure-light.sidebar-mini.sidebar-collapse .main-header .navbar {
+        margin-right: 0;
+        margin-left: unset;
+    }
+
+    .skin-azure.sidebar-mini.sidebar-collapse .content-wrapper,
+    .skin-azure-light.sidebar-mini.sidebar-collapse .content-wrapper,
+    .skin-azure.sidebar-mini.sidebar-collapse .right-side,
+    .skin-azure-light.sidebar-mini.sidebar-collapse .right-side,
+    .skin-azure.sidebar-mini.sidebar-collapse .main-footer,
+    .skin-azure-light.sidebar-mini.sidebar-collapse .main-footer {
+        margin-right: 62px !important;
+        margin-left: unset !important;
+    }
+}
+
+.skin-cosmos .navbar-nav > li > a,
+.skin-cosmos-light .navbar-nav > li > a {
+    border-right: 1px solid #342e73;
+    border-left: unset;
+}
+
+.skin-cosmos .sidebar-menu li > a > .fa-angle-left, .skin-cosmos-light .sidebar-menu li > a > .fa-angle-left {
+    left: 5px;
+    right: unset;
+}
+
+.skin-cosmos-light .sidebar-menu .treeview-menu > li > a {
+    padding-right: 19px;
+    padding-left: unset;
+}
+
+.skin-cosmos-light .sidebar-menu .treeview-menu > li {
+    margin: 1px 0 1px 4px;
+}
+
+.skin-cosmos-light .sidebar-menu li > a > .fa-angle-left {
+    left: 1px;
+    right: unset;
+}
+
+@media (min-width: 768px) {
+    .skin-cosmos .content,
+    .skin-cosmos-light .content {
+        padding: 25px 20px 15px 15px;
+    }
+
+    .skin-cosmos .content-header,
+    .skin-cosmos-light .content-header {
+        padding-right: 20px;
+        padding-left: unset;
+    }
+
+    .skin-cosmos .main-header .navbar,
+    .skin-cosmos-light .main-header .navbar {
+        margin-right: 0;
+        margin-left: unset;
+    }
+
+    .skin-cosmos .main-header .sidebar-toggle,
+    .skin-cosmos-light .main-header .sidebar-toggle {
+        /*padding-left: 1.25rem;
+        padding-right: auto;*/
+        right: 4px;
+        left: unset;
+    }
+
+    .skin-cosmos .main-header .logo,
+    .skin-cosmos-light .main-header .logo {
+        right: 6rem;
+        left: unset;
+        border-right: 1px solid #342e73;
+        border-left: unset;
+    }
+
+        .skin-cosmos .main-header .logo b,
+        .skin-cosmos-light .main-header .logo b {
+            float: right;
+            margin-right: 15px;
+            margin-left: 8px;
+        }
+
+    .skin-cosmos.sidebar-mini.sidebar-collapse .main-header .navbar,
+    .skin-cosmos-light.sidebar-mini.sidebar-collapse .main-header .navbar {
+        margin-right: 0;
+        margin-left: unset;
+    }
+
+    .skin-cosmos.sidebar-mini.sidebar-collapse .content-wrapper,
+    .skin-cosmos-light.sidebar-mini.sidebar-collapse .content-wrapper,
+    .skin-cosmos.sidebar-mini.sidebar-collapse .right-side,
+    .skin-cosmos-light.sidebar-mini.sidebar-collapse .right-side,
+    .skin-cosmos.sidebar-mini.sidebar-collapse .main-footer,
+    .skin-cosmos-light.sidebar-mini.sidebar-collapse .main-footer {
+        margin-right: 62px !important;
+        margin-left: unset !important;
+    }
+}
+
+.skin-glassy .sidebar-menu li > a > .fa-angle-left,
+.skin-glassy-light .sidebar-menu li > a > .fa-angle-left {
+    left: 5px;
+    right: unset;
+}
+
+.skin-glassy-light .sidebar-menu .treeview-menu > li > a {
+    padding-right: 19px;
+    padding-left: unset;
+}
+
+.skin-glassy-light .sidebar-menu .treeview-menu > li {
+    margin: 1px 0 1px 4px;
+}
+
+.skin-glassy-light .sidebar-menu li > a > .fa-angle-left {
+    left: 1px;
+    right: unset;
+}
+
+.skin-glassy .navbar-nav > li > a,
+.skin-glassy-light .navbar-nav > li > a {
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    border-left: unset;
+}
+
+@media (min-width: 768px) {
+    .skin-glassy .content,
+    .skin-glassy-light .content {
+        padding: 25px 20px 15px 15px;
+    }
+
+    .skin-glassy .content-header,
+    .skin-glassy-light .content-header {
+        padding-right: 20px;
+        padding-left: unset;
+    }
+
+    .skin-glassy .main-header .navbar,
+    .skin-glassy-light .main-header .navbar {
+        margin-right: 0;
+        margin-left: unset;
+    }
+
+    .skin-glassy .main-header .sidebar-toggle,
+    .skin-glassy-light .main-header .sidebar-toggle {
+        /*padding-left: 1.25rem;
+        padding-right: unset;*/
+        right: 4px;
+        left: unset;
+    }
+
+    .skin-glassy .main-header .logo,
+    .skin-glassy-light .main-header .logo {
+        right: 6rem;
+        left: unset;
+        border-right: 1px solid rgba(255, 255, 255, 0.2);
+        border-left: unset;
+    }
+
+        .skin-glassy .main-header .logo b,
+        .skin-glassy-light .main-header .logo b {
+            float: right;
+            margin-right: 15px;
+            margin-left: unset;
+        }
+
+    .skin-glassy.sidebar-mini.sidebar-collapse .main-header .navbar,
+    .skin-glassy-light.sidebar-mini.sidebar-collapse .main-header .navbar {
+        margin-right: 0;
+        margin-left: unset;
+    }
+
+    .skin-glassy.sidebar-mini.sidebar-collapse .content-wrapper,
+    .skin-glassy-light.sidebar-mini.sidebar-collapse .content-wrapper,
+    .skin-glassy.sidebar-mini.sidebar-collapse .right-side,
+    .skin-glassy-light.sidebar-mini.sidebar-collapse .right-side,
+    .skin-glassy.sidebar-mini.sidebar-collapse .main-footer,
+    .skin-glassy-light.sidebar-mini.sidebar-collapse .main-footer {
+        margin-right: 62px !important;
+        margin-left: unset !important;
+    }
+}
+
+.mailbox-attachments li {
+    float: right;
+    margin-left: 10px;
+    margin-right: unset;
+}
+
+.lockscreen-image {
+    right: -10px;
+    left: unset;
+}
+
+.lockscreen-credentials {
+    margin-right: 70px;
+    margin-left: unset;
+}
+
+.error-page > .headline {
+    float: right;
+}
+
+.error-page > .error-content {
+    margin-right: 190px;
+    margin-left: unset;
+}
+
+@media (max-width: 991px) {
+    .error-page > .error-content {
+        margin-right: 0;
+        margin-left: unset;
+    }
+}
+
+.btn-social {
+    padding-right: 44px;
+    padding-left: unset;
+}
+
+    .btn-social > :first-child {
+        right: 0;
+        left: unset;
+    }
+
+    .btn-social.btn-lg {
+        padding-right: 61px;
+        padding-left: unset;
+    }
+
+    .btn-social.btn-sm {
+        padding-right: 38px;
+        padding-left: unset;
+    }
+
+    .btn-social.btn-xs {
+        padding-right: 30px;
+        padding-left: unset;
+    }
+
+.btn-social-icon {
+    padding-right: 44px;
+    padding-left: unset;
+}
+
+    .btn-social-icon > :first-child {
+        right: 0;
+        left: unset;
+    }
+
+    .btn-social-icon.btn-lg {
+        padding-right: 61px;
+        padding-left: unset;
+    }
+
+    .btn-social-icon.btn-sm {
+        padding-right: 38px;
+        padding-left: unset;
+    }
+
+    .btn-social-icon.btn-xs {
+        padding-right: 30px;
+        padding-left: unset;
+    }
+
+.fc-header-title h2 {
+    margin-right: 10px;
+    margin-left: unset;
+}
+
+.fc-header-right {
+    padding-left: 10px;
+    padding-right: unset;
+}
+
+.fc-header-left {
+    padding-right: 10px;
+    padding-left: unset;
+}
+
+.fc-day-number {
+    padding-left: 10px;
+    padding-right: unset;
+}
+
+.fc-color-picker > li {
+    float: right;
+    margin-left: 5px;
+    margin-right: unset;
+}
+
+.select2-container[dir="rtl"] .select2-selection--single .select2-selection__rendered {
+    padding-right: 20px;
+    padding-left: 6px;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+    left: 3px;
+    right: unset;
+}
+
+.select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
+    margin-left: 5px;
+    margin-right: unset;
+}
+
+.select2-container .select2-selection--single .select2-selection__rendered {
+    padding-left: 10px;
+    padding-right: unset;
+}
+
+.direct-chat-text:after,
+.direct-chat-text:before {
+    left: 100%;
+    right: unset;
+}
+
+.right .direct-chat-text {
+    margin-left: 50px;
+    margin-right: 0;
+}
+
+    .right .direct-chat-text:after,
+    .right .direct-chat-text:before {
+        right: 100%;
+        left: auto;
+    }
+
+.direct-chat-img {
+    float: right;
+}
+
+.right .direct-chat-img {
+    float: left;
+}
+
+.contacts-list-img {
+    float: right;
+}
+
+.contacts-list-info {
+    margin-right: 45px;
+    margin-left: unset;
+}
+
+.products-list .product-img {
+    float: right;
+}
+
+.products-list .product-info {
+    margin-right: 60px;
+    margin-left: unset;
+}
+
+.users-list > li {
+    float: right;
+}
+
+.margin-r-5 {
+    margin-left: 5px;
+    margin-right: unset;
+}
+
+.user-block img {
+    float: right;
+}
+
+.user-block .username,
+.user-block .description,
+.user-block .comment {
+    margin-right: 50px;
+    margin-left: unset;
+}
+
+.user-block.user-block-sm .username,
+.user-block.user-block-sm .description,
+.user-block.user-block-sm .comment {
+    margin-right: 40px;
+    margin-left: unset;
+}
+
+.img-sm,
+.img-md,
+.img-lg,
+.box-comments .box-comment img,
+.user-block.user-block-sm img {
+    float: right;
+}
+
+    .img-sm + .img-push {
+        margin-right: 40px;
+        margin-left: unset;
+    }
+
+    .img-md + .img-push {
+        margin-right: 70px;
+        margin-left: unset;
+    }
+
+    .img-lg + .img-push {
+        margin-right: 110px;
+        margin-left: unset;
+    }
+
+.attachment-block .attachment-img {
+    float: right;
+}
+
+.attachment-block .attachment-pushed {
+    margin-right: 110px;
+    margin-left: unset;
+}
+
+@media print {
+    .content-wrapper,
+    .right-side,
+    .main-footer {
+        margin-right: 0 !important;
+        margin-left: unset !important;
+    }
+
+    .invoice-col {
+        float: right;
+    }
+}
+
+.main-header .logo i {
+    float: right;
+}
+
+.s-BasicProgressDialogContent .progress-label {
+    right: 45%;
+    left: unset;
+}
+
+.s-ReportPage div.report-list ul {
+    padding-right: 0;
+    padding-left: unset;
+}
+
+    .s-ReportPage div.report-list ul ul {
+        margin-right: 20px;
+        margin-left: unset;
+    }
+
+.s-ReportPage div.report-list li.category > .line {
+    padding: 4px 20px 4px 0;
+}
+
+.s-ReportPage li > .line > span.toggle {
+    right: 5px;
+    left: unset;
+}
+
+.slick-header-menu input[type=checkbox] {
+    margin-left: 2px;
+    margin-right: unset;
+}
+
+.slick-header-menu BUTTON {
+    margin: 4px 0 4px 4px;
+}
+
+.slick-header-menuicon {
+    margin-left: 4px;
+    margin-right: unset;
+}
+
+.s-PermissionCheckEditor .effective-permission {
+    padding-right: 22px;
+    padding-left: unset;
+}
+
+.favorite-views {
+    margin-left: 4px;
+    margin-right: unset;
+    float: left !important;
+}
+
+    .favorite-views li.fav {
+        padding-left: 16px;
+        padding-right: unset;
+    }
+
+    .favorite-views i.fa-trash-o {
+        left: 4px;
+        right: unset;
+    }
+
+.view-switch {
+    float: left !important;
+}
+
+.s-GridWithDialog .s-GridDialogPane {
+    left: 0;
+    right: unset;
+    padding-right: 5px;
+    padding-left: unset;
+}
+
+.slick-header-column,
+.slick-header-column.ui-state-default {
+    padding: 8px 4px 8px 2px;
+}
+
+.ui-datepicker-trigger {
+    margin-right: 5px;
+    margin-left: unset;
+}
+
+.s-Form .ui-datepicker-trigger {
+    margin-right: 5px;
+    margin-left: unset;
+    padding-left: 5px;
+}
+
+.s-QuickSearchBar .quick-search-icon {
+    padding-right: 10px;
+    padding-left: unset;
+    border-radius: 0 4px 4px 0;
+}
+
+.s-SlickPager {
+    padding: 2px 4px 2px 0;
+}
+
+.s-Toolbar .buttons-inner {
+    margin-left: 5px;
+    margin-right: unset;
+}
+
+div.s-Toolbar .tool-button.no-text span.button-inner {
+    padding: 0px 13px 18px 3px;
+}
+
+.s-Toolbar .tool-button {
+    margin: 0 -1px 0 0;
+    border-right: 1px solid #ddd;
+    border-left: unset;
+}
+
+    .s-Toolbar .tool-button .button-inner {
+        padding: 0 20px 0 0;
+    }
+
+.wizard-horz ul.property-tabs li {
+    float: right;
+    padding: 0 30px 0 20px;
+}
+
+    .wizard-horz ul.property-tabs li .chevron {
+        left: -14px;
+        right: unset;
+    }
+
+        .wizard-horz ul.property-tabs li .chevron:before {
+            left: 1px;
+            right: unset;
+        }
+
+    .wizard-horz ul.property-tabs li span.text {
+        margin-right: 4px;
+        margin-left: unset;
+    }
+
+    .wizard-horz ul.property-tabs li:first-child {
+        padding-right: 20px;
+        padding-left: unset;
+    }
+
+.s-MailboxView .box .nav-stacked li ul {
+    padding-right: 40px;
+    padding-left: unset;
+}
+
+.s-MailViewer .date {
+    float: left;
+}
+
+.s-MailViewer .mail-info {
+    margin: 10px 10px 10px 5px;
+}
+
+.s-MailViewer div.attachments ul li {
+    margin-left: 8px;
+    margin-right: unset;
+}
+
+.slick-column-groupable {
+    margin-right: 4px;
+    margin-left: unset;
+}
+
+.slick-dropped-grouping {
+    margin-left: 5px;
+    margin-right: unset;
+}
+
+.slick-groupby-remove {
+    padding-left: 20px;
+    padding-right: unset;
+}
+
+.slick-group-expand-all {
+    left: 28px;
+    right: unset;
+}
+
+.slick-group-collapse-all {
+    left: 8px;
+    right: unset;
+}
+
+.s-AggregatesPopup li {
+    padding: 4px 14px 4px 4px;
+}
+
+.drag-helper {
+    padding: 4px 26px 4px 10px;
+}
+
+.s-Meeting-MeetingDialog .AttendeeList .s-Toolbar .s-LookupEditor {
+    float: right;
+}
+
+.s-Meeting-MeetingDialog .AttendeeList .s-Toolbar .has-inplace-button {
+    margin-left: 1px;
+    margin-right: unset;
+}
+
+.page-content .s-ResetPasswordPanel .s-Form .editor.s-DateTimeEditor.time {
+    margin-right: 4px;
+    margin-left: unset;
+}
+
+.login-box .s-Form label.error,
+.register-box .s-Form label.error {
+    padding: 26px 22px 0 0;
+}
+
+.login-box .s-Form .vx,
+.register-box .s-Form .vx {
+    left: -20px;
+    right: unset;
+}
+
+.login-box .s-Form .emaildomain,
+.register-box .s-Form .emaildomain {
+    float: left;
+}
+
+#s-AccessDeniedPage div.message a.redirect,
+#s-ApplicationErrorPage div.message a.redirect,
+#s-NotFoundPage div.message a.redirect,
+#s-GenericErrorPage div.message a.redirect {
+    float: right;
+}
+
+#s-AccessDeniedPage div.message div.date-time,
+#s-ApplicationErrorPage div.message div.date-time,
+#s-NotFoundPage div.message div.date-time,
+#s-GenericErrorPage div.message div.date-time {
+    float: left;
+}
+
+.s-Northwind-CategoryDialog .s-Form .editor.s-DateTimeEditor.time {
+    margin-right: 4px;
+    margin-left: unset;
+}
+
+.s-Northwind-OrderDetailDialog .s-Form .editor.s-DateTimeEditor.time {
+    margin-right: 4px;
+    margin-left: unset;
+}
+
+@media (max-width: 445px) {
+    .s-Northwind-OrderDetailDialog .s-Form .editor.s-DateTimeEditor.time {
+        margin-right: 4px;
+        margin-left: unset;
+    }
+}
+
+.s-Northwind-RegionDialog .s-Form .editor.s-DateTimeEditor.time {
+    margin-right: 4px;
+    margin-left: unset;
+}
+
+.s-Northwind-ShipperDialog .s-Form .editor.s-DateTimeEditor.time {
+    margin-right: 4px;
+    margin-left: unset;
+}
+
+.s-Northwind-SupplierDialog .s-Form .editor.s-DateTimeEditor.time {
+    margin-right: 4px;
+    margin-left: unset;
+}
+
+.s-Northwind-TerritoryDialog .s-Form .editor.s-DateTimeEditor.time {
+    margin-right: 4px;
+    margin-left: unset;
+}
+
+.employee-symbol {
+    padding: 2px 20px 2px 0px;
+    background-position: right;
+}
+
+.shipper-symbol {
+    padding: 2px 20px 2px 0px;
+    background-position: right;
+}
+
+.freight-symbol {
+    padding: 2px 0px 2px 20px;
+    background-position: left;
+}
+
+.s-NotesEditor .note-text {
+    padding-left: 24px;
+    padding-right: unset;
+}
+
+.s-NotesEditor .note-delete {
+    left: 6px;
+    right: unset;
+}
+
+.navbar-custom-menu > .navbar-nav > li.user-menu {
+    float: right;
+}
+
+.add-button span.button-inner {
+    background-position: right;
+}
+
+.add-note-button span.button-inner {
+    background-position: right;
+}
+
+.send-button span.button-inner {
+    background-position: right;
+}
+
+.slick-pg-first > span:before {
+    content: "\f050";
+}
+
+.slick-pg-last > span:before {
+    content: "\f049";
+}
+
+.slick-pg-next > span:before {
+    content: "\f048";
+}
+
+.slick-pg-prev > span:before {
+    content: "\f051";
+}
+
+.alert .close {
+    float: left;
+}
+
+.localization-button span.button-inner {
+    background-position: right;
+}
+
+.quick-filter-item .range-separator {
+    margin: 0 6px 0 6px;
+}
+
+.input-group .form-control:last-child, .input-group-addon:last-child, .input-group-btn:last-child > .btn, .input-group-btn:last-child > .btn-group > .btn, .input-group-btn:last-child > .dropdown-toggle, .input-group-btn:first-child > .btn:not(:first-child), .input-group-btn:first-child > .btn-group:not(:first-child) > .btn {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.export-pdf-button span.button-inner {
+    background-position: right;
+}
